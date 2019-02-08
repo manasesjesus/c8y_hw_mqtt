@@ -1,3 +1,3 @@
 ### Hello World of Cumulocity MQTT 
 
-C code of the tutorial
+Java code of the tutorial
