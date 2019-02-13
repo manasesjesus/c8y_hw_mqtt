@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // client, user and device details
-        final String serverURI   = "tcp://mqtt.cumulocity.com";
+        final String serverUrl   = "tcp://mqtt.cumulocity.com";     /* ssl://mqtt.cumulocity.com:8883 for a secure connection */
         final String clientId    = "my_mqtt_java_client";
         final String device_name = "My new MQTT device";
         final String tenant      = "<<tenant>>";
@@ -21,7 +21,7 @@ public class App {
         options.setPassword(password.toCharArray());
         
         // connect the client to Cumulocity
-        final MqttClient client = new MqttClient(serverURI, clientId, null);
+        final MqttClient client = new MqttClient(serverUrl, clientId, null);
         client.connect(options);
 
         // register a new device
