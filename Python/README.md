@@ -4,5 +4,5 @@ Python code of the tutorial available at https://cumulocity.com/guides/device-sd
 
 #### Run the application
 ```shell
-
+$ python hello_mqtt.py 
 ```
