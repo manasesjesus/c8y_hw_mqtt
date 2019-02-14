@@ -10,7 +10,7 @@ public class App {
         // client, user and device details
         final String serverUrl   = "tcp://mqtt.cumulocity.com";     /* ssl://mqtt.cumulocity.com:8883 for a secure connection */
         final String clientId    = "my_mqtt_java_client";
-        final String device_name = "My new MQTT device";
+        final String device_name = "My Java MQTT device";
         final String tenant      = "<<tenant>>";
         final String username    = "<<username>>";
         final String password    = "<<password>>";
@@ -29,6 +29,9 @@ public class App {
         
         // set device's hardware information
         client.publish("s/us", "110,S123456789,MQTT test model,Rev0.1".getBytes(), 2, false);
+
+        // add restart operation
+        client.publish("s/us", "114,c8y_Restart".getBytes(), 2, false);
         
         System.out.println("The device \"" + device_name + "\" has been registered successfully!");
 
