@@ -2,4 +2,6 @@ Java/hello-mqtt-java/.project
 Java/hello-mqtt-java/.settings
 Java/hello-mqtt-java/.classpath
 target
-.vscode
+.vscode/
+node_modules/
+Nodejs/package-lock.json
