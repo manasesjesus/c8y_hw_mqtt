@@ -42,7 +42,7 @@ function createDevice () {
         publish("s/us", "110,S123456789,MQTT test model,Rev0.1", function() {
             publish('s/us', '114,c8y_Restart', function() { 
                 log('Enable restart operation support');
-                //listen for operation
+                // listen for operations
                 client.subscribe("s/ds");
             })
 
