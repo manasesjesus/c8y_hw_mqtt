@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "mqtt": "*"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
