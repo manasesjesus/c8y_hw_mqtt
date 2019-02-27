@@ -29,7 +29,7 @@ client.on("connect", function () {
         // listen for operations
         client.subscribe("s/ds");
 
-        // send temperature measurement every 3 seconds
+        // send a temperature measurement every 3 seconds
         setInterval(function() {
             console.log("Sending temperature measurement: " + temperature + "º");
             client.publish("s/us", "211," + temperature);
