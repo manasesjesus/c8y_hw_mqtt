@@ -22,8 +22,8 @@ const client = mqtt.connect(serverUrl, {
 client.on("connect", function () {
     // ...register a new device with restart operation
     client.publish("s/us", "100," + device_name + ",c8y_MQTTDevice", function() {
-        client.publish('s/us', '114,c8y_Restart', function() { 
-            console.log('Device registered with restart operation support');
+        client.publish("s/us", "114,c8y_Restart", function() { 
+            console.log("Device registered with restart operation support");
         });
 
         // listen for operations
@@ -32,7 +32,7 @@ client.on("connect", function () {
         // send temperature measurement every 3 seconds
         setInterval(function() {
             console.log("Sending temperature measurement: " + temperature + "º");
-            client.publish("s/us", '211,' + temperature);
+            client.publish("s/us", "211," + temperature);
             temperature += 0.5 - Math.random();
         }, 3000);
     });
