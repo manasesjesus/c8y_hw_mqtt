@@ -42,12 +42,24 @@ public class App {
                 
                 System.out.println("Received operation " + payload);
                 if (payload.startsWith("510")) {
-                    System.out.println("Simulating device restart...");
-                    client.publish("s/us", "501,c8y_Restart".getBytes(), 2, false);
-                    System.out.println("...restarting...");
-                    Thread.sleep(TimeUnit.SECONDS.toMillis(1));
-                    client.publish("s/us", "503,c8y_Restart".getBytes(), 2, false);
-                    System.out.println("...done...");
+                    // execute the operation in another thread to allow the MQTT client to
+					// finish processing this message and acknowledge receipt to the server
+                    Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
+                        public void run() {
+                            try {
+                                System.out.println("Simulating device restart...");
+                                client.publish("s/us", "501,c8y_Restart".getBytes(), 2, false);
+                                System.out.println("...restarting...");
+                                Thread.sleep(TimeUnit.SECONDS.toMillis(5));
+                                client.publish("s/us", "503,c8y_Restart".getBytes(), 2, false);
+                                System.out.println("...done...");
+                            } catch (MqttException e) {
+                                e.printStackTrace();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
                 }
             }
         });
