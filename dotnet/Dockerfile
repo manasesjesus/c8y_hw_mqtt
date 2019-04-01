@@ -3,7 +3,8 @@ WORKDIR /app
 
 COPY *.csproj ./
 RUN dotnet restore
-
+RUN dotnet build
 COPY . ./
+
 RUN dotnet publish -c Release -o out
 ENTRYPOINT ["dotnet", "out/hello-mqtt-cs.dll"]
