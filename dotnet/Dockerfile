@@ -7,4 +7,4 @@ RUN dotnet build
 COPY . ./
 
 RUN dotnet publish -c Release -o out
-ENTRYPOINT ["dotnet", "out/hello-mqtt-cs.dll"]
+ENTRYPOINT ["dotnet", "out/hello-mqtt-cs.exe"]
