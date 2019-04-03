@@ -44,7 +44,7 @@ client.on("connect", function () {
 // display all incoming messages
 client.on("message", function (topic, message) {
     console.log('Received operation "' + message + '"');
-    if (message.toString().indexOf("510") == 0) {
+    if (message.toString().indexOf("510") === 0) {
         console.log("Simulating device restart...");
         client.publish("s/us", "501,c8y_Restart");
         console.log("...restarting...");
