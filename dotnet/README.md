@@ -5,6 +5,7 @@ C# code of the tutorial available at [https://cumulocity.com/guides/device-sdk/m
 ##### Prerequisites
 
 - Docker locally installed/configured
+- Cumulocity Tenant ID and user credentials
 
 #### Build and run the application
 
