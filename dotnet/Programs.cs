@@ -2,10 +2,11 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Cumulocity.SDK.MQTT.Model;
+using Cumulocity.SDK.MQTT.Model.ConnectionOptions;
 using Cumulocity.SDK.MQTT.Model.MqttMessage;
 using MqttClient = Cumulocity.SDK.MQTT.MqttClient;
 
-namespace MQTTClientExample
+namespace hello_mqtt
 {
     class Program
     {
@@ -24,7 +25,7 @@ namespace MQTTClientExample
             const string user = "<<tenant>>/<<username>>";
             const string password = "<<password>>";
 
-            //connections details
+            // connections details
             var cDetails = new ConnectionDetailsBuilder()
                 .WithClientId(clientId)
                 .WithHost(serverUrl)
@@ -65,7 +66,7 @@ namespace MQTTClientExample
                 .WithMessageContent("114,c8y_Restart")
                 .Build());
 
-            // generate a random temperature (10º-20º) measurement and send it every 1 s
+            // generate a random temperature (10º-20º) measurement and send it every second
             Random rnd = new Random();
             for (int i = 0; i < 5; i++)
             {
