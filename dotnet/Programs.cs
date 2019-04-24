@@ -6,11 +6,11 @@ using Cumulocity.SDK.MQTT.Model.ConnectionOptions;
 using Cumulocity.SDK.MQTT.Model.MqttMessage;
 using MqttClient = Cumulocity.SDK.MQTT.MqttClient;
 
-namespace hello_mqtt
+namespace hello_mqtt_cs
 {
     class Program
     {
-        static void Main (string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             Task.Run(RunClientAsync);
@@ -19,11 +19,11 @@ namespace hello_mqtt
 
         private static async Task RunClientAsync()
         {
-            const string serverUrl = "mqtt.cumulocity.com";
+            const string serverUrl = "manga.eu-latest.cumulocity.com/mqtt";
             const string clientId = "my_mqtt_cs_client";
-            const string device_name = "My CS MQTT device";
-            const string user = "<<tenant>>/<<username>>";
-            const string password = "<<password>>";
+            const string device_name = "My C# MQTT device";
+            const string user = "manga/manga@softwareag.com";
+            const string password = "zaq12wsx.";
 
             // connections details
             var cDetails = new ConnectionDetailsBuilder()
@@ -68,7 +68,7 @@ namespace hello_mqtt
 
             // generate a random temperature (10º-20º) measurement and send it every second
             Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 7; i++)
             {
                 int temp = rnd.Next(10, 20);
                 Console.WriteLine("Sending temperature measurement (" + temp + "º) ...");
