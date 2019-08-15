@@ -66,7 +66,7 @@ namespace hello_mqtt_cs
                 .WithMessageContent("114,c8y_Restart")
                 .Build());
 
-            // generate a random temperature (10º-20º) measurement and send it every second
+            // generate a random temperature (10º-20º) measurement and send it every second 7 times
             Random rnd = new Random();
             for (int i = 0; i < 7; i++)
             {
