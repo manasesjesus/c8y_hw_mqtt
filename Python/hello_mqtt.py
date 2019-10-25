@@ -4,8 +4,7 @@ import paho.mqtt.client as mqtt
 import time, threading, ssl, random
 
 # client, user and device details
-serverUrl   = "tcp://mqtt.cumulocity.com"
-port        = 1883
+serverUrl   = "mqtt.cumulocity.com"
 clientId    = "my_mqtt_python_client"
 device_name = "My Python MQTT device"
 tenant      = "<<tenant>>"
@@ -35,7 +34,7 @@ def sendMeasurements():
         thread.start()
         while True: time.sleep(100)
     except (KeyboardInterrupt, SystemExit):
-        print 'Received keyboard interrupt, quitting ...'
+        print("Received keyboard interrupt, quitting ...")
 
 # publish a message
 def publish(topic, message, waitForAck = False):
@@ -53,12 +52,12 @@ client.username_pw_set(tenant + "/" + username, password)
 client.on_message = on_message
 client.on_publish = on_publish
 
-client.connect(serverUrl, port)
+client.connect(serverUrl)
 client.loop_start()
 publish("s/us", "100," + device_name + ",c8y_MQTTDevice", True)
 publish("s/us", "110,S123456789,MQTT test model,Rev0.1")
 publish("s/us", "114,c8y_Restart")
-print "Device registered successfully!"
+print("Device registered successfully!")
 
 client.subscribe("s/ds")
 sendMeasurements()
