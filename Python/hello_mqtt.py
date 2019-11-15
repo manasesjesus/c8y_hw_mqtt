@@ -7,7 +7,7 @@ import time, threading, ssl, random
 serverUrl   = "mqtt.cumulocity.com"
 clientId    = "my_mqtt_python_client"
 device_name = "My Python MQTT device"
-tenant      = "<<tenant>>"
+tenant      = "<<tenant_ID>>"
 username    = "<<username>>"
 password    = "<<password>>"
 
