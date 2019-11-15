@@ -2,10 +2,10 @@
 
 C# code of the tutorial available at [https://cumulocity.com/guides/device-sdk/mqtt-examples#hello-mqtt-cs](https://cumulocity.com/guides/device-sdk/mqtt-examples#hello-mqtt-cs) running on Docker.
 
-##### Prerequisites
+#### Prerequisites
 
-- Docker locally installed/configured
-- Cumulocity Tenant ID and user credentials
+*   Docker locally installed/configured
+*   Cumulocity Tenant ID and user credentials
 
 #### Build and run the application
 
