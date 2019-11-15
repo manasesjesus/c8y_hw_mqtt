@@ -27,7 +27,7 @@ namespace hello_mqtt
             const string serverUrl = "mqtt.cumulocity.com";
             const string clientId = "my_mqtt_cs_client";
             const string device_name = "My CS MQTT device";
-            const string user = "<<tenant>>/<<username>>";
+            const string user = "<<tenant_ID>>/<<username>>";
             const string password = "<<password>>";
 
             // connections details
