@@ -5,7 +5,7 @@ const mqtt = require("mqtt");
 const serverUrl   = "tcp://mqtt.cumulocity.com";
 const clientId    = "my_mqtt_nodejs_client";
 const device_name = "My Node.js MQTT device";
-const tenant      = "<<tenant>>";
+const tenant      = "<<tenant_ID>>";
 const username    = "<<username>>";
 const password    = "<<password>>";
 
