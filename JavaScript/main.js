@@ -2,7 +2,7 @@
 var serverUrl   = "ws://mqtt.cumulocity.com/mqtt";     /* wss://mqtt.cumulocity.com/mqtt for a secure connection */
 var clientId    = "my_mqtt_js_client";
 var device_name = "My JS MQTT device";
-var tenant      = "<<tenant>>";
+var tenant      = "<<tenant_ID>>";
 var username    = "<<username>>";
 var password    = "<<password>>";
 

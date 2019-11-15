@@ -11,7 +11,7 @@ public class App {
         final String serverUrl   = "tcp://mqtt.cumulocity.com";     /* ssl://mqtt.cumulocity.com:8883 for a secure connection */
         final String clientId    = "my_mqtt_java_client";
         final String device_name = "My Java MQTT device";
-        final String tenant      = "<<tenant>>";
+        final String tenant      = "<<tenant_ID>>";
         final String username    = "<<username>>";
         final String password    = "<<password>>";
         
