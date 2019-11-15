@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import paho.mqtt.client as mqtt
-import time, threading, ssl, random
+import time, threading, random
 
 # client, user and device details
 serverUrl   = "mqtt.cumulocity.com"
